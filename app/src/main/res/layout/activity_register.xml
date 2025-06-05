@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="32dp"
-    android:background="#0099CC">
+    android:background="@android:color/holo_blue_dark">
 
     <TextView
         android:layout_width="match_parent"
@@ -45,7 +45,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:text="Register"
@@ -70,7 +70,7 @@
         <TextView
             android:id="@+id/tvLogin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="Log in here"
             android:textColor="@android:color/black"
             android:textSize="16sp"

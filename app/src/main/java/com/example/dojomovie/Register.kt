@@ -20,16 +20,13 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        // Initialize views
         etPhone = findViewById(R.id.etPhone)
         etPassword = findViewById(R.id.etPassword)
         btnRegister = findViewById(R.id.btnRegister)
         tvLogin = findViewById(R.id.tvLogin)
 
-        // Initialize database helper
         databaseHelper = DBHelper(this)
 
-        // Handle the Register button click
         btnRegister.setOnClickListener {
             val phone = etPhone.text.toString()
             val password = etPassword.text.toString()
@@ -39,18 +36,15 @@ class Register : AppCompatActivity() {
             } else if (databaseHelper.isUserRegistered(phone)) {
                 Toast.makeText(this, "User already exists", Toast.LENGTH_SHORT).show()
             } else {
-                // Register the new user in the database
                 databaseHelper.addUser(phone, password)
                 Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
 
-                // Redirect to Login Activity
                 val intent = Intent(this, Login::class.java)
                 startActivity(intent)
-                finish()  // Close the current activity
+                finish()
             }
         }
 
-        // Handle the login link click (redirect to LoginActivity)
         tvLogin.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)

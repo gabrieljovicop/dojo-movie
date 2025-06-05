@@ -6,7 +6,7 @@
     android:padding="32dp">
 
     <TextView
-        android:id="@+id/tvAppName"
+        android:id="@+id/tvLoginTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -49,7 +49,7 @@
         android:textColor="@android:color/white"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:textSize="18sp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="20dp"/>
 
     <LinearLayout
@@ -70,7 +70,7 @@
         <TextView
             android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text=" Register here!"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="16sp"
